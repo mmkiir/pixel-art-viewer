@@ -218,6 +218,15 @@ class MainFrame(wx.Frame):
 
         self.SetTitle("Pixel Art Viewer")
 
+        icon = wx.EmptyIcon()
+        icon.CopyFromBitmap(
+            wx.Bitmap(
+                wx.Image(str(Path.cwd() / "assets" / "Tinycons_Pixel_Art_Viewer.ico")),
+                wx.BITMAP_TYPE_ANY,
+            )
+        )
+        self.SetIcon(icon)
+
         self.SetSizer(box_sizer)
         self.Layout()
         self.Show()
